@@ -1,0 +1,565 @@
+html{
+    background: #E6ECF0;
+}
+body{
+  display: grid
+  font-family: Avenir
+  -webkit-text-size-adjust: 100%
+  -webkit-font-smoothing: antialiased
+}
+.container-fluid{
+    margin: auto;
+    width: 990;
+    height: 100%;
+    background: #E6ECF0;
+}
+
+.profile{
+    
+    background: white;
+    float: left;
+    width: 388;
+/*    height: 140px;*/
+}
+
+.right{
+    background: #E8F5FD;
+    float: right;
+    width: 588;
+    
+}
+
+.post{
+    padding: 10px;
+    color: #4d5e65;
+    background: rgb(255, 255, 255);
+    width: 100%;
+    height:110;
+    margin: 15px;
+    border-radius: 3%
+}
+
+.post > p{
+    margin: 15px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-kerning: normal;
+    font-weight: 500
+}
+.moments{
+    width: 100%;
+    margin: 15px;
+    float:none;
+}
+.temp{
+    height: 400px;
+    width: auto;
+}
+.username{
+    float: left;
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    
+}
+
+.address{
+    float: left;
+    margin-top: 0;
+    padding-left: 10px;
+    font-weight: lighter;
+    font-size: 13px;
+    line-height: 25px;
+}
+
+p{
+    margin: 0;
+}
+.more-info{
+    margin: 15px;
+    width: auto;
+    height: 50;
+}
+.Follow-num{
+    
+    width: 50%;
+    float: left;
+    height: 100%;
+    
+    text-align: center;
+    font-weight: bold;
+}
+
+div.Follow-num>p{
+    width: auto;
+    height: auto;
+    color: deepskyblue;
+
+    
+}
+.Post-num{
+    font-weight: bold;
+    text-align: center;
+    width: 50%;
+    float: right;
+    height: 100%;
+}
+.Post-num > p{
+    color: deepskyblue;
+}
+*{
+    box-sizing: border-box;
+}
+  .inp {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  max-width: 280px;
+}
+.inp .label {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  font-size: 16px;
+  color: #9098a9;
+  font-weight: 500;
+  transform-origin: 0 0;
+  transition: all 0.2s ease;
+}
+.inp .border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: #07f;
+  transform: scaleX(0);
+  transform-origin: 0 0;
+  transition: all 0.15s ease;
+}
+.inp input {
+  -webkit-appearance: none;
+  width: 100%;
+  border: 0;
+  font-family: inherit;
+  padding: 12px 0;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 2px solid #c8ccd4;
+  background: none;
+  border-radius: 0;
+  color: #88a0d1;
+  transition: all 0.15s ease;
+}
+.inp input:hover {
+  background: rgba(34,50,84,0.03);
+}
+.inp input:not(:placeholder-shown) + span {
+  color: #5a667f;
+  transform: translateY(-26px) scale(0.75);
+}
+.inp input:focus {
+  background: none;
+  outline: none;
+}
+.inp input:focus + span {
+  color: #07f;
+  transform: translateY(-26px) scale(0.75);
+}
+.inp input:focus + span + .border {
+  transform: scaleX(1);
+}
+
+html body .buttons {
+    margin-top: 10px;
+    margin-right: 20px;
+    float: right;
+  display: flex;
+  align-items: baseline;
+}
+html body .buttons .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  padding: 0.2rem 0.5rem;
+  margin: 0 1rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+html body .buttons .btn:nth-child(1) .text {
+  transition: 0.5s;
+}
+html body .buttons .btn:nth-child(1) .left, html body .buttons .btn:nth-child(1) .right, html body .buttons .btn:nth-child(1):before, html body .buttons .btn:nth-child(1):after {
+  position: absolute;
+  left: -900%;
+  top: 30%;
+  height: 0;
+  width: 0;
+  background: deepskyblue;
+  transition: 0.5s;
+}
+html body .buttons .btn:nth-child(1):before, html body .buttons .btn:nth-child(1):after {
+  content: "";
+}
+html body .buttons .btn:nth-child(1):hover .text {
+  color: #769de6;
+}
+html body .buttons .btn:nth-child(1):hover .left, html body .buttons .btn:nth-child(1):hover .right {
+  top: 0;
+  width: 2px;
+  height: 100%;
+}
+html body .buttons .btn:nth-child(1):hover .left {
+  left: 0;
+}
+html body .buttons .btn:nth-child(1):hover .right {
+  left: calc(100% - 2px);
+}
+html body .buttons .btn:nth-child(1):hover:before, html body .buttons .btn:nth-child(1):hover:after {
+  height: 2px;
+  width: 100%;
+  left: 0;
+}
+html body .buttons .btn:nth-child(1):hover:before {
+  top: 0;
+}
+html body .buttons .btn:nth-child(1):hover:after {
+  top: calc(100% - 2px);
+}
+
+.pic {
+    border-radius: 50%;
+    float: left;
+    height: 50;
+    width: 50;
+}
+.user_pic > img{
+        position: absolute;
+}
+
+.momentblock {
+    border-radius: 15px 0;
+    background: white;
+    margin: 5px;
+    padding: 10px;
+    /*display:inline-block;*/
+}
+
+.momentblock >p{
+    margin: 10px;
+}
+.content {
+    display: block;
+    width: 80%;
+    margin-left: 10px;
+}
+.content>span{
+    font-weight: 100;
+}
+.content > p:nth-child(1){
+    font-weight: bold;
+}
+.content >p:nth-child(2){
+    margin: 5px 0 0px 1px;
+    font-size: 14;
+}
+.user-info {
+    display:block;
+    height: 60px;
+    padding: 5px;
+}
+
+.intro > p {
+    font-weight: bold;
+    margin: 15 35;
+    
+}
+.intro > p > span{
+    font-weight: 450;
+    font-size: 14
+}
+
+.intro {
+    margin: 5px;
+    border-left: 6px ;
+    border-top: 5px ;
+    border-right: 4px ;
+    border-bottom: 5px ;
+    border-radius: ;
+    border-color: rgba(58, 177, 187, 0.46);
+    border-style: dotted;
+
+}
+
+
+
+.edit {
+    text-align: center;
+}
+
+.edit > button {
+    background-color: #fff;
+    border: 1px solid #66757f;
+    color: #66757f;
+    border-radius: 100px;
+    box-shadow: none;
+    cursor: pointer;
+    font-size: 1px;
+    font-weight: 400;
+    padding: 4px 18px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    margin: 5 0 5 0;
+
+}
+
+.intro-edit {
+    margin: 15px;
+    width: 90%;
+    height: 100;
+    font-family:cursive;
+    font-size: 14;
+    padding: 5px;
+    align-content: center;
+    
+}
+
+.cancel {
+    margin-left: 75px;
+    margin-bottom: 5px;
+    float: left;
+}
+.cancel > button{
+    background: rgba(157, 29, 83, 0.44);
+    color: white;
+    border: 0;
+}
+
+
+.confirm {
+    float: right;
+    margin-bottom: 5px;
+    margin-right: 75px;
+}
+.confirm > button{
+    color: white;
+    border: 0;
+    background: rgba(0, 191, 255, 0.55);
+}
+#avatarSlect {
+    border: 1px solid red;
+    border-radius: 50%;
+/*    position:absolute;*/
+    opacity: 0;
+    float: left; 
+    width: 50px; 
+    height: 50px;
+}
+
+.collapse{
+    visibility: collapse;
+}
+
+
+.button-like {
+  max-height: 50px;
+  border: 2px solid #8a8a8a;
+  background-color: transparent;
+  text-decoration: none;
+  padding: 0.5rem;
+  margin: 10px 0px 5px 0;
+  position: relative;
+  vertical-align: middle;
+  text-align: center;
+  display: inline-block;
+  border-radius: 2rem;
+  color: #8a8a8a;
+  transition: all ease 0.4s;
+}
+
+.button-like span {
+
+}
+
+.button-like .fa,
+.button-like span {
+  transition: all ease 0.4s;
+}
+
+.button-like:focus {
+  background-color: transparent;
+}
+
+.button-like:focus .fa,
+.button-like:focus span {
+  color: #8a8a8a;
+}
+
+.button-like:hover {
+  border-color: #cc4b37;
+  background-color: transparent;
+}
+
+.button-like:hover .fa,
+.button-like:hover span {
+  color: #cc4b37;
+}
+
+.liked {
+  background-color: #ad817fad;
+  border-color: white;
+}
+
+.liked .fa,
+.liked span {
+  color: #fefefe;
+}
+
+.liked:focus {
+  background-color: #cc4b37;
+}
+
+.liked:focus .fa,
+.liked:focus span {
+  color: #fefefe;
+}
+
+.liked:hover {
+  background-color: #cc4b37;
+  border-color: #cc4b37;
+}
+
+.liked:hover .fa,
+.liked:hover span {
+  color: #fefefe;
+}
+
+
+
+.like-this-moment {
+    position: relative;
+    
+}
+
+.up {
+    display: flex;
+}
+
+.down {
+    border-bottom: 1px;
+    border-bottom-style:solid;
+    border-bottom-color: rgba(64, 66, 67, 0.67);
+    
+    width: 95%;
+    position: relative;
+    display: flex;
+    margin: 15px 8px 7px 15px;
+    height: 24px;
+
+}
+.down > p{
+    padding-bottom: 3px;
+    font-weight: 400;
+    font-style: italic;
+    color:darkcyan;
+    margin: 0 5;
+}
+
+
+.replyBlock {
+    border-radius: 0 15px;
+    width: 100%;
+    padding: 5px;
+    font-size: 5;
+    margin: 5 5 5 5;
+    border: 5;
+    display:inline-block;
+    background: rgba(178, 212, 211, 0.15)
+}
+.replyBlock > p:nth-child(1){
+    color: #52597e;
+    float: left;
+    font-weight: bold;
+    font-style: oblique;
+}
+.replyBlock > p:nth-child(2){
+    color: rgba(60, 45, 45, 0.82);
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 480;
+    float: left;
+    font-weight: 400;
+}
+.replyBlock >p:nth-child(3){
+    font-weight: 300;
+    font-style: italic;
+    font-size: 1;
+    float: right;
+}
+
+.reply-button {
+    
+    border: 0;
+    border-radius: 5px 0;
+    background: rgba(130, 163, 178, 0.6);
+    color: aliceblue;
+    position:absolute;
+    right:-5px;
+    display: block;
+    float: right;
+}
+
+.likelist {
+    font-weight: bold;
+    font-size: 8;
+    width: 95%;
+    font-feature-settings: normal;
+    display: inline-flex;
+
+}
+.likelist > p{
+    padding-bottom: 3px;
+    font-weight: 400;
+    font-style: italic;
+    color:darkcyan;
+    margin: 0 5;
+}
+
+.likelist > p > span{
+    color: black;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.reply-area {
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+.reply-area > textarea{
+    border-radius: 15px;
+    max-width: 80%;
+    padding: 5px;
+    width: 100%;
+    background: #d3d3d369;
+    border: 0;
+    margin: 0 0 0 10;
+    max-height: 300px;
+    
+}
+
+.reply-post {
+        
+    border: 0;
+    border-radius: 10px;
+    background: rgba(130, 163, 178, 0.6);
+    color: aliceblue;
+}
+.hidden{
+    display: none;
+}
